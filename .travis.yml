@@ -6,4 +6,5 @@ jdk:
   - oraclejdk14
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  # run the command in message line 2
+  - bash -c "$(git log -1 --pretty=%B | tail -1)"
